@@ -1,13 +1,16 @@
 import React from 'react';
 import Message from "../Message/Message";
 import PostContexProvider from '../../MyContex/PostFile';
+import StateFunction from '../../MyContex/NewContex';
 
 function Posts() {
     return (
         <div>
-        <PostContexProvider>
-            <Message />
-        </PostContexProvider>
+            <PostContexProvider>
+                <StateFunction>
+                    <Message />
+                </StateFunction>
+            </PostContexProvider>
         </div>
     )
 }
